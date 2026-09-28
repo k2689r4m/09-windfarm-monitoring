@@ -1,0 +1,38 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 8080",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@slim-select/vue": "^1.6.0",
+    "@vueform/slider": "^2.1.10",
+    "axios": "^1.7.2",
+    "d3": "^7.9.0",
+    "dayjs": "^1.11.13",
+    "lodash": "^4.17.21",
+    "simplex-noise": "^3.0.1",
+    "three": "^0.167.0",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3",
+    "vuex": "^4.1.0",
+    "vuex-persistedstate": "^4.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.77.8",
+    "vite": "^5.3.1"
+  }
+}

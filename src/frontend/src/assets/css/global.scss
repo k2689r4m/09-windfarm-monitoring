@@ -1,0 +1,82 @@
+// 사용하는 폰트
+$font: 'Pretendard'; // 기본폰트
+
+// 컬러셋
+$colPrimary: #1ad8ff;
+$colSub: #fee9f4;
+$colSub2: #c5ffea;
+$colError: #ff3f3f;
+$colGrey: #526077;
+$colBg: #f8f8f8;
+$colLine: #7091bf;
+
+// 텍스트
+$textCol1: #040015;
+$textCol2: #666;
+$textCol3: #999;
+$textCol4: #ccc;
+
+$grey-100: #f8f9fa;
+$grey-200: #e9ecef;
+$grey-300: #dee2e6;
+$grey-400: #ced4da;
+$grey-500: #adb5bd;
+$grey-600: #6c757d;
+$grey-700: #495057;
+$grey-800: #343a40;
+$grey-900: #212529;
+
+$pc: 1920px;
+$tab: 860px;
+$mo: 660px;
+
+/**********
+텍스트 말줄임
+***********/
+@mixin text_ellipsis {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	word-wrap: normal;
+	width: 100%;
+	max-width: 100%;
+}
+
+@mixin text_ellipsis_multi($line, $lh) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	line-height: #{$lh}px;
+	height: #{$lh * $line}px;
+	max-width: 100%;
+}
+
+/**********
+아이콘
+***********/
+@mixin ic($name, $w, $h) {
+	$url: '../images/icon/#{$name}.svg';
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: #{$w}px;
+	height: #{$h}px;
+}
+
+/**********
+wide background
+***********/
+@mixin wide_bg($color) {
+	content: '';
+	display: block;
+	width: 200vw;
+	height: 100%;
+	background-color: $color;
+	position: absolute;
+	left: -50vw;
+	top: 0;
+	z-index: -1;
+}
